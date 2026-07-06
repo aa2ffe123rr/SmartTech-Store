@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Activa - أفضل متجر إلكترونيات في الإمارات. تسوق أحدث الهواتف والأجهزة والإكسسوارات بأفضل الأسعار في الإمارات.">
-<meta name="theme-color" content="#2563eb">
+<meta name="theme-color" content="#fac402">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Activa">
 <meta property="og:site_name" content="Activa">
@@ -33,7 +33,7 @@ img { max-width: 100%; height: auto; }
 
 /* ========== CSS CUSTOM PROPERTIES ========== */
 :root {
-  --clr-primary: #2563eb;
+  --clr-primary: #fac402;
   --clr-primary-dark: #1d4ed8;
   --clr-primary-light: #eff6ff;
   --clr-secondary: #7c3aed;
@@ -234,7 +234,7 @@ nav { max-width:1200px; margin:0 auto; padding:0 2rem; height:100%; display:flex
 .fy-card-info { padding:.5rem .7rem .65rem; }
 .fy-card-name { font-size:.78rem; font-weight:600; margin-bottom:.2rem; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; line-height:1.3; }
 .fy-card-price { font-size:.85rem; font-weight:800; color:var(--clr-primary); }
-.ai-badge { display:inline-flex; align-items:center; gap:.3rem; background:linear-gradient(135deg,#7c3aed,#2563eb); color:#fff; font-size:.65rem; font-weight:700; padding:2px 8px; border-radius:20px; }
+.ai-badge { display:inline-flex; align-items:center; gap:.3rem; background:linear-gradient(135deg,#7c3aed,#fac402); color:#fff; font-size:.65rem; font-weight:700; padding:2px 8px; border-radius:20px; }
 
 /* ========== PRODUCT GRID ========== */
 .home-products { max-width:1200px; margin:4rem auto; padding:0 2rem; }
@@ -510,7 +510,7 @@ body.dark-mode .stock-badge.out { background:#7f1d1d44; color:#fca5a5; }
 .inv-table th { background:#f8f9fa; padding:.6rem 1rem; font-size:.78rem; font-weight:700; color:#64748b; text-align:right; border-bottom:2px solid #e2e8f0; }
 .inv-table td { padding:.7rem 1rem; font-size:.85rem; border-bottom:1px solid #f1f5f9; }
 .inv-table tfoot td { font-weight:700; background:#f8f9fa; border-top:2px solid #e2e8f0; }
-.inv-total-row td { font-size:1rem; color:#2563eb; }
+.inv-total-row td { font-size:1rem; color:#fac402; }
 .inv-footer { padding:1rem 1.5rem; background:#f8f9fa; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.5rem; font-size:.78rem; color:#64748b; }
 @media print {
   body > *:not(#invoiceModal) { display:none !important; }
@@ -1286,7 +1286,7 @@ window.addEventListener('load', function() {
     new MutationObserver(function(){setTimeout(applyReveal,80);}).observe(document.getElementById('app')||document.body,{childList:true,subtree:true});
   }
   window.addEventListener('hashchange',function(){var app=document.getElementById('app');if(app){app.classList.add('page-fade');setTimeout(function(){app.classList.remove('page-fade');},150);}},{passive:true});
-  window.launchConfetti=function(){var c=document.createElement('canvas');c.style.cssText='position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:99999;';document.body.appendChild(c);var ctx=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;var colors=['#2563eb','#7c3aed','#10b981','#f59e0b','#ef4444'];var ps=Array.from({length:90},function(){return{x:Math.random()*c.width,y:-10,r:Math.random()*7+3,d:Math.random()*80,color:colors[Math.floor(Math.random()*colors.length)],tA:0,tS:Math.random()*.1+.04,spd:Math.random()*3+1.5};});var fr=0;function draw(){ctx.clearRect(0,0,c.width,c.height);ps.forEach(function(p){p.y+=p.spd;p.x+=Math.sin(p.d/25)*1.5;p.tA+=p.tS;p.d++;ctx.beginPath();ctx.fillStyle=p.color;ctx.globalAlpha=Math.max(0,1-p.y/c.height);ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;});if(++fr<130)requestAnimationFrame(draw);else c.remove();}draw();};
+  window.launchConfetti=function(){var c=document.createElement('canvas');c.style.cssText='position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:99999;';document.body.appendChild(c);var ctx=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;var colors=['#fac402','#7c3aed','#10b981','#f59e0b','#ef4444'];var ps=Array.from({length:90},function(){return{x:Math.random()*c.width,y:-10,r:Math.random()*7+3,d:Math.random()*80,color:colors[Math.floor(Math.random()*colors.length)],tA:0,tS:Math.random()*.1+.04,spd:Math.random()*3+1.5};});var fr=0;function draw(){ctx.clearRect(0,0,c.width,c.height);ps.forEach(function(p){p.y+=p.spd;p.x+=Math.sin(p.d/25)*1.5;p.tA+=p.tS;p.d++;ctx.beginPath();ctx.fillStyle=p.color;ctx.globalAlpha=Math.max(0,1-p.y/c.height);ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;});if(++fr<130)requestAnimationFrame(draw);else c.remove();}draw();};
   window.flyToCart=function(src){if(!src)return;var cartBtn=document.getElementById('cartIcon');if(!cartBtn)return;var s=src.getBoundingClientRect(),cb=cartBtn.getBoundingClientRect();var dot=document.createElement('div');dot.className='fly-dot';dot.style.top=(s.top+s.height/2-6)+'px';dot.style.left=(s.left+s.width/2-6)+'px';document.body.appendChild(dot);requestAnimationFrame(function(){dot.style.transition='all .55s cubic-bezier(.2,.8,.5,1)';dot.style.top=(cb.top+cb.height/2-6)+'px';dot.style.left=(cb.left+cb.width/2-6)+'px';dot.style.opacity='0';dot.style.transform='scale(.2)';});setTimeout(function(){dot.remove();cartBtn.classList.add('cart-pop');setTimeout(function(){cartBtn.classList.remove('cart-pop');},280);},570);};
   window.animateTotal=function(target){var el=document.getElementById('cartTotal');if(!el||!target)return;var t0=performance.now(),dur=600;function step(now){var p=Math.min((now-t0)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=Math.round(target*ease).toLocaleString()+' AED';if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);};
   var _ac=window.addToCart;
@@ -2046,7 +2046,7 @@ function generateInvoice(orderData) {
           <tfoot>
             <tr><td colspan="3" style="text-align:left">${isAr?'المجموع الفرعي':'Subtotal'}</td><td style="text-align:center">${subtotal.toLocaleString()} AED</td></tr>
             <tr><td colspan="3" style="text-align:left">${isAr?'ضريبة القيمة المضافة (5%)':'VAT (5%)'}</td><td style="text-align:center">${isAr?'مشمول':'Included'}</td></tr>
-            <tr class="inv-total-row"><td colspan="3" style="text-align:left">${isAr?'💰 الإجمالي الكلي':'💰 Grand Total'}</td><td style="text-align:center;color:#2563eb">${subtotal.toLocaleString()} AED</td></tr>
+            <tr class="inv-total-row"><td colspan="3" style="text-align:left">${isAr?'💰 الإجمالي الكلي':'💰 Grand Total'}</td><td style="text-align:center;color:#fac402">${subtotal.toLocaleString()} AED</td></tr>
           </tfoot>
         </table>
       </div>
